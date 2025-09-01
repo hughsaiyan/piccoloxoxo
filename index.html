@@ -16,7 +16,8 @@
       background-size: cover;
     }
     img {
-      transform: scale(2); /* GIF’i 2 kat büyütür */
+      width: 50vw;   /* GIF ekranın %50 genişliği kadar */
+      height: auto;  /* oranı korur */
     }
   </style>
 </head>
@@ -24,10 +25,18 @@
   <!-- Gif -->
   <img src="piccolo-gohan.gif" alt="Piccolo ve Gohan">
 
-  <!-- Müzik autoplay -->
-  <audio autoplay loop>
+  <!-- Müzik autoplay (muted, tıklayınca ses açılır) -->
+  <audio id="bg-music" autoplay loop muted>
     <source src="Dragon Ball Z - Piccolo-san Daisuki.mp3" type="audio/mpeg">
   </audio>
+
+  <script>
+    // İlk tıklamada ses açılır
+    document.body.addEventListener("click", () => {
+      const music = document.getElementById("bg-music");
+      music.muted = false;
+      music.play();
+    }, { once: true });
+  </script>
 </body>
 </html>
-
