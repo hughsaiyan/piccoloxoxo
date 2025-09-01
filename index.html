@@ -16,8 +16,14 @@
       background-size: cover;
     }
     img {
-      width: 50vw;   /* GIF ekranın %50 genişliği kadar */
-      height: auto;  /* oranı korur */
+      width: 35vw;   /* PC için %35 genişlik */
+      height: auto;
+    }
+    /* Telefon ekranları için */
+    @media (max-width: 768px) {
+      img {
+        width: 70vw;  /* Telefonlarda %70 genişlik */
+      }
     }
   </style>
 </head>
