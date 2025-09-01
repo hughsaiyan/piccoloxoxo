@@ -10,29 +10,13 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-image: url('arkaplan.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
       margin: 0;
       flex-direction: column;
+      background: url('arkaplan.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
     img {
-      width: 600px; /* 2 kat büyütülmüş */
-      height: auto;
-    }
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      background: #4caf50;
-      color: white;
-    }
-    button:hover {
-      background: #45a049;
+      transform: scale(2); /* GIF’i 2 kat büyütür */
     }
   </style>
 </head>
@@ -40,15 +24,10 @@
   <!-- Gif -->
   <img src="piccolo-gohan.gif" alt="Piccolo ve Gohan">
 
-  <!-- Müzik autoplay (sessiz başlar) -->
-  <audio autoplay loop muted id="bgm">
+  <!-- Müzik autoplay -->
+  <audio autoplay loop>
     <source src="Dragon Ball Z - Piccolo-san Daisuki.mp3" type="audio/mpeg">
   </audio>
-
-  <!-- Ses açma butonu -->
-  <button onclick="document.getElementById('bgm').muted = false;">
-    🔊 Müziği Aç
-  </button>
 </body>
 </html>
 
